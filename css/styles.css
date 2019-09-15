@@ -1,0 +1,187 @@
+/*mobile first*/
+* {
+    font-family: 'Fira Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.background {
+    background-color: #F0ECEE;
+}
+
+.emphasis {
+    color: #FF4850
+}
+
+nav {
+    margin-top: 15px;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-bottom: 15px;
+}
+
+.nav-menu {
+    display: flex; 
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.nav-title {
+    font-size: 25px;
+    list-style-type: none;
+    /*font-weight seems heavier in image than max listed on spec sheet*/
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.nav-item {
+    font-size: 20px;
+    list-style-type: none;
+    padding: 2px;
+    font-weight: 400;
+}
+
+.nav-item button {
+    margin-top: 20px;
+}
+
+a:link {
+    text-decoration: none;
+    color: #88898B;
+}
+
+a:visited {
+    text-decoration: none;
+
+}
+
+a:hover {
+    color: #CCC;
+    text-decoration: none;
+}
+
+/*https://developer.mozilla.org/en-US/docs/Web/CSS/white-space*/
+.nav-menu li {
+    white-space: nowrap;
+}
+
+
+button {
+    background-color: #FF4850;
+    padding: 10px 50px;
+    /*border-radius: 5*/ /*radius listed on spec sheets leads to rounder edges than provided visual*/
+    border-radius: 15px;
+    border: 0px;
+    font-size: 20px;
+    font-weight: 400;
+    color: #F0ECEE;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #CCC;
+}
+
+.main-content {
+    margin-top: 15px;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-bottom: 15px;
+}
+
+.main-content h1 {
+    font-size: 30px;
+    line-height: 150%;
+    font-weight: 600;
+
+}
+
+.main-content p {
+    color: #88898B; 
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-weight: 300;
+    font-size: 14px;
+}
+
+/*desktop*/
+@media all and (min-width: 786px) {
+    .background {
+        background-color: #F0ECEE;
+        background-image: url('../assets/bulldog.jpg');
+        background-size: cover;
+        background-position: left top;
+        background-repeat: no-repeat;
+    }
+
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-left: 60px;
+        margin-right: 60px;
+        margin-top: 15px;
+    }
+
+    .nav-title {
+        margin-bottom: 0px;
+        font-size: 28px;
+    }
+
+    .nav-menu {
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-end;
+        margin-bottom: 0px;
+        padding: 15px;
+    }
+
+    .nav-item {
+        padding: 10px 15px;
+        font-size: 20px;
+    }
+
+    button {
+        width: auto;
+        font-size: 20px;
+        margin-top: 5px
+    }
+
+    .nav-item button {
+        padding-left: 15px;
+        padding-right: 15px;
+        margin-top: 0px;
+        font-size: 20px;
+    }
+
+    .main-content {
+        margin-right: 60px;
+        margin-left: 60px;
+        width: 40%;
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .main-content h1 {
+        font-size: 40px;
+
+    }
+
+    .main-content p {
+        font-size: 22px;
+        padding-top: 35px;
+        padding-bottom: 35px;
+    }
+
+    body {
+        display: flex;
+        flex-direction: column;
+        height: 80vh;
+        justify-content: space-between;
+    }
+}
+
